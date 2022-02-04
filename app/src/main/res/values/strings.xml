@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Beach Tour</string>
     <string name="todo">TODO</string>
+    <string name="tempat_anda">Tempat Anda</string>
+    <string name="tempat_tujuan">Tempat Tujuan</string>
 </resources>

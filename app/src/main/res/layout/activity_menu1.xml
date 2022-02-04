@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Menu1Activity">
 
     <LinearLayout
@@ -17,27 +18,87 @@
             android:src="@drawable/header_aksesibilitas"
             android:adjustViewBounds="true"
             android:contentDescription="@string/todo" />
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="right"
                 tools:ignore="RtlHardcoded">
-                <ImageButton
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/maps"
-                    android:scaleType="fitCenter"
-                    android:adjustViewBounds="true"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="40dp"
-                    android:background="#00ffffff"
-                    android:contentDescription="@string/todo" />
-            </LinearLayout>
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_blue"
+                    android:layout_marginTop="30dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_maps_menu"
+                        android:layout_margin="10dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/todo"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
 
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_weight="0.9"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_from_to"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="20dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/todo"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="0.4"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:padding="10dp"
+                                android:layout_marginBottom="30dp"
+                                android:hint="@string/tempat_anda"
+                                android:textColorHint="@color/white"
+                                android:background="@drawable/bg_search"
+                                android:inputType="text" />
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:padding="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/tempat_tujuan"
+                                android:textColorHint="@color/white"
+                                android:background="@drawable/bg_search"
+                                android:inputType="text" />
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_weight="0.9"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_switch"
+                            android:layout_marginHorizontal="20dp"
+                            android:layout_marginVertical="10dp"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/todo"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/maps"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:background="#00ffffff"
+                android:contentDescription="@string/todo" />
         </ScrollView>
     </LinearLayout>
 

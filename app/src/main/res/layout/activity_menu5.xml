@@ -4,38 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Menu5Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:orientation="vertical">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/header_e_tiket"
             android:adjustViewBounds="true"/>
-        <ScrollView
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="30dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/cari_pantai"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/todo"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_weight="0.4"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="right">
-<!--                <ImageButton-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:src="@drawable/maps"-->
-<!--                    android:scaleType="fitCenter"-->
-<!--                    android:adjustViewBounds="true"-->
-<!--                    android:layout_marginTop="30dp"-->
-<!--                    android:layout_marginBottom="40dp"-->
-<!--                    android:background="#00ffffff"/>-->
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:queryBackground="@drawable/bg_search1"
+                    app:iconifiedByDefault="false"
+                    app:searchIcon="@null"/>
             </LinearLayout>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_search"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/todo"/>
+        </LinearLayout>
 
-        </ScrollView>
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/search"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="-15dp"
+            android:layout_marginRight="70dp"
+            android:background="#6CCEFF"
+            android:visibility="visible" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:src="@drawable/btn_pesan"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"
+            android:contentDescription="@string/todo"/>
     </LinearLayout>
 
 </RelativeLayout>
